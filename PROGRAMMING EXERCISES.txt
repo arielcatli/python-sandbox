@@ -1,0 +1,36 @@
+#Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array.
+#The element value in the i-th row and j-th column of the array should be i*j.
+#Note: i=0,1.., X-1; j=0,1,¡­Y-1.
+
+dimension = [int(x) for x in (input("Enter two numbers separated by a comma (Row,Colum): ")).split(",")]
+X = int(dimension[0])
+Y = int(dimension[1])
+print(X,Y)
+array = [[0 for col in range(Y)] for row in range(X)]
+
+for row in range(0,X):
+    for col in range(0,Y):
+        array[row][col] = row*col
+
+print(array)
+
+
+*********************************************************************
+
+#Write a program that accepts a comma separated sequence of words as input and prints
+#the words in a comma-separated sequence after sorting them alphabetically.
+#Suppose the following input is supplied to the program:
+#without,hello,bag,world
+#Then, the output should be:
+#bag,hello,without,world
+
+#Hints:
+#In case of input data being supplied to the question, it should be assumed to be a console input.
+
+str_input = input("Enter comma-separated words: ").split(",")
+str_input.sort(key=str.lower)
+print(",".join(str_input))
+
+
+************************************************************
+
