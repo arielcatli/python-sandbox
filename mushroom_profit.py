@@ -53,7 +53,7 @@ class window():
         self.__result_frame.pack(fill = tk.X)
         ttk.Label(self.__result_frame, text="PROFIT: ").pack(side=tk.LEFT)
         self.__entry_text_result = tk.StringVar()
-        self.__entry_result = ttk.Entry(self.__result_frame, width="40", textvariable=self.__entry_text_result)
+        self.__entry_result = ttk.Entry(self.__result_frame, width="40", textvariable=self.__entry_text_result, state="readonly")
         self.__entry_result.pack(side=tk.RIGHT)
         
         
